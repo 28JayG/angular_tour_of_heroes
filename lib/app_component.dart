@@ -5,9 +5,12 @@ import 'package:angular_tour_of_heros/src/routes.dart';
 
 @Component(
   selector: 'my-app',
+  styleUrls: ['app_component.css'],
   template: '''
     <h1>{{title}}</h1>
     <nav>
+        <a [routerLink]="RoutePaths.dashboard.toUrl()"
+            [routerLinkActive]="'active'">DashBoard</a>
         <a [routerLink]="RoutePaths.heroes.toUrl()"
             [routerLinkActive]="'active'">Heroes
         </a>
